@@ -39,4 +39,16 @@ public class TaxService implements iActorBehaviuor {
     public Actor getActor() {
         return new OrdinaryClient(name);
     }
+
+    @Override
+    public boolean isReturnOrder() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isReturnOrder'");
+    }
+
+    @Override
+    public void setReturnOrder(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setReturnOrder'");
+    }
 }

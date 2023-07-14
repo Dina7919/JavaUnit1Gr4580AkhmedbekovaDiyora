@@ -7,8 +7,9 @@ import Interfaces.iActorBehaviuor;
 
 import Interfaces.iMarketBehaviour;
 import Interfaces.iQueueBehaviour;
+import Interfaces.iReturnOrder;
 
-public class Market implements iMarketBehaviour,iQueueBehaviour {
+public class Market implements iMarketBehaviour,iQueueBehaviour, iActorBehaviuor, iReturnOrder {
 
     private List<iActorBehaviuor> queue;
 
@@ -43,6 +44,7 @@ public class Market implements iMarketBehaviour,iQueueBehaviour {
        takeOrder();
        giveOrder();
        releaseFromQueue();
+       returnOrder();
     }
 
     @Override
@@ -87,6 +89,63 @@ public class Market implements iMarketBehaviour,iQueueBehaviour {
             }
         }
         
+    }
+
+    @Override
+    
+    public void returnOrder() {
+        for(iActorBehaviuor actor: queue)
+        {
+            if(actor.isReturnOrder())
+            {
+                actor.setReturnOrder(isReturnOrder());
+                System.out.println(actor.getActor().getName()+" клиент вернул свой заказ ");
+            }
+        }
+        
+    }
+
+
+    @Override
+    public boolean isTakeOrder() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isTakeOrder'");
+    }
+
+    @Override
+    public boolean isMakeOrder() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isMakeOrder'");
+    }
+
+    @Override
+    public void setTakeOrder(boolean takeOrder) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setTakeOrder'");
+    }
+
+    @Override
+    public void setMakeOrder(boolean makeOrder) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setMakeOrder'");
+    }
+
+    @Override
+    public Actor getActor() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getActor'");
+    }
+
+    @Override
+    public boolean isReturnOrder() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isReturnOrder'");
+    }
+
+    @Override
+    public void setReturnOrder(boolean returnOrder) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setReturnOrder'");
     }
 
 

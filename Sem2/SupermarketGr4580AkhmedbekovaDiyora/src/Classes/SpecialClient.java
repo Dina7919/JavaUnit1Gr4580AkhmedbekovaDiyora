@@ -32,6 +32,18 @@ public class SpecialClient extends Actor{
       return this;
     }
 
+    @Override
+    public boolean isReturnOrder() {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'isReturnOrder'");
+    }
+
+    @Override
+    public void setReturnOrder(boolean b) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'setReturnOrder'");
+    }
+
     // @Override
     // public String getName() {
     //     return name;

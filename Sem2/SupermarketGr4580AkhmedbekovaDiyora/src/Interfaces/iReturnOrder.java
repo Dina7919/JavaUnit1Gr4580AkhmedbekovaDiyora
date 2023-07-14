@@ -1,3 +1,12 @@
-public class iReturnOrder {
-    
+package Interfaces;
+
+import Classes.Actor;
+
+public interface iReturnOrder {
+    // данный метод возвращает сообщение, что клиент сделал заказ при условии, что клиент сделал заказ
+    void takeOrder();
+    // данный метод возвращает сообщение, что клиент получил свой заказ при условии получения заказа 
+    void giveOrder();
+    // данный метод возвращает сообщение, что клиент вернул свой заказ, при условии возврата заказа
+    void returnOrder();
 }
